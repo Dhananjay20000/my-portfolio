@@ -56,6 +56,22 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
+          {/* Profile Photo Added Here */}
+          <motion.div 
+            className="flex justify-center mb-8"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
+            <div className="relative group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+              <img 
+                src="/profile.jpg" 
+                alt="Dhananjay Chougule" 
+                className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-2xl"
+              />
+            </div>
+          </motion.div>
+
           <p className="text-accent text-lg mb-4 tracking-widest uppercase">
             Welcome to My Portfolio
           </p>
