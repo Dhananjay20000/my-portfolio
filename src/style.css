@@ -94,3 +94,12 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.profile-img {
+    width: 200px;          /* Adjust size as needed */
+    height: 200px;
+    border-radius: 50%;    /* Makes the image circular */
+    object-fit: cover;     /* Prevents stretching */
+    border: 5px solid #fff; /* Adds a white border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow */
+}
