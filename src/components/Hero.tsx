@@ -117,7 +117,7 @@ const Hero = () => {
             </motion.a>
           </div>
 
-          {/* Social Links */}
+          {/* Social Linkss */}
           <div className="flex justify-center gap-6">
             <motion.a
               href="https://github.com/Dhananjay20000"
@@ -162,5 +162,5 @@ const Hero = () => {
   );
 };
 
-export default Hero;  
+export default Hero;     
       
