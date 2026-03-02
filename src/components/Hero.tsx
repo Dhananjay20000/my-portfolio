@@ -41,22 +41,18 @@ const Hero = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      {/* Animated Background */}
       <div className="absolute inset-0 animated-bg" />
       
-      {/* Gradient Orbs */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl float-animation" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/20 rounded-full blur-3xl float-animation" style={{ animationDelay: '1s' }} />
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl" />
 
-      {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Profile Photo Section */}
           <motion.div 
             className="flex justify-center mb-8"
             whileHover={{ scale: 1.05 }}
@@ -64,8 +60,9 @@ const Hero = () => {
           >
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+              {/* This path works for Vite public folders */}
               <img 
-                src="/profile.jpg" 
+                src="profile.jpg" 
                 alt="Dhananjay Chougule" 
                 className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-2xl"
               />
@@ -107,7 +104,7 @@ const Hero = () => {
             </motion.a>
             
             <motion.a
-              href="/resume.pdf"
+              href="resume.pdf"
               download
               className="btn-secondary flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
@@ -117,7 +114,6 @@ const Hero = () => {
             </motion.a>
           </div>
 
-          {/* Social Links */}
           <div className="flex justify-center gap-6">
             <motion.a
               href="https://github.com/Dhananjay20000"
@@ -147,7 +143,6 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
           animate={{ y: [0, 10, 0] }}
