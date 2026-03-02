@@ -65,7 +65,7 @@ const Hero = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <img 
-                src="/profile.jpg" 
+                src="./profile.jpg"
                 alt="Dhananjay Chougule" 
                 className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-2xl"
               />
