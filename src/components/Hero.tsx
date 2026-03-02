@@ -64,7 +64,7 @@ const Hero = () => {
           >
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-              {/* Corrected path for Vite + GitHub Pages sub-directory */}
+              {/* standardized path for Vite public folder */}
               <img 
                 src="profile.jpg" 
                 alt="Dhananjay Chougule" 
