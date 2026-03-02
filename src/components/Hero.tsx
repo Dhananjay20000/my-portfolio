@@ -56,7 +56,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          {/* Profile Photo Added Here */}
+          {/* Profile Photo Section */}
           <motion.div 
             className="flex justify-center mb-8"
             whileHover={{ scale: 1.05 }}
@@ -65,10 +65,10 @@ const Hero = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent rounded-full blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <img 
-  src="/my-portfolio/profile.jpg" 
-  alt="Dhananjay Chougule" 
-  className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-2xl"
-/>
+                src="/profile.jpg" 
+                alt="Dhananjay Chougule" 
+                className="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-white shadow-2xl"
+              />
             </div>
           </motion.div>
 
@@ -97,69 +97,4 @@ const Hero = () => {
               href="#projects"
               className="btn-primary flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={(e) => {
-                e.preventDefault();
-                document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              View Projects <FaArrowRight />
-            </motion.a>
-            
-            <motion.a
-              href="/resume.pdf"
-              download
-              className="btn-secondary flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaDownload /> Download Resume
-            </motion.a>
-          </div>
-
-          {/* Social Linkss */}
-          <div className="flex justify-center gap-6">
-            <motion.a
-              href="https://github.com/Dhananjay20000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors text-2xl"
-              whileHover={{ scale: 1.2, y: -5 }}
-            >
-              <FaGithub />
-            </motion.a>
-            <motion.a
-              href="https://linkedin.com/in/chouguledhananjay"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors text-2xl"
-              whileHover={{ scale: 1.2, y: -5 }}
-            >
-              <FaLinkedin />
-            </motion.a>
-            <motion.a
-              href="mailto:mrdhananjaychougule@gmail.com"
-              className="text-gray-400 hover:text-white transition-colors text-2xl"
-              whileHover={{ scale: 1.2, y: -5 }}
-            >
-              <FaEnvelope />
-            </motion.a>
-          </div>
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-        >
-          <div className="w-6 h-10 border-2 border-gray-500 rounded-full flex justify-center pt-2">
-            <div className="w-1 h-3 bg-primary rounded-full" />
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
-
-export default Hero;        
+              whileTap
