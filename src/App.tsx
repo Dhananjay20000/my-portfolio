@@ -1,3 +1,4 @@
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,15 +12,15 @@ import ParticleBackground from './components/ParticleBackground';
 
 function App() {
   return (
-    <div className="min-h-screen bg-dark animated-bg">
+    <div className="min-h-screen bg-dark text-white relative">
       {/* Particle Background */}
       <ParticleBackground />
-      
+
       {/* Navigation */}
       <Navbar />
-      
+
       {/* Main Content */}
-      <main>
+      <main className="z-10 relative">
         <Hero />
         <About />
         <Skills />
@@ -28,7 +29,7 @@ function App() {
         <Certifications />
         <Contact />
       </main>
-      
+
       {/* Footer */}
       <Footer />
     </div>
