@@ -27,24 +27,18 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
-          cache-dependency-path: PORTFOLIO/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: |
-          cd PORTFOLIO
-          npm ci
+        run: npm ci
 
       - name: Build
-        run: |
-          cd PORTFOLIO
-          npm run build
-        env:
-          VITE_BASE_URL: /my-portfolio/
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: PORTFOLIO/dist
+          path: dist
 
   deploy:
     needs: build
