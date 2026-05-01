@@ -83,8 +83,8 @@ const Navbar = () => {
               item.name === 'Resume' ? (
                 <a
                   key={item.name}
-                  href="/resume.pdf"
-                  download="Dhananjay_Chougule_Resume.pdf"
+                  href="/Dhananjay_Resume(Latest)AI.pdf"
+                  download="Dhananjay_Resume(Latest)AI.pdf"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition"
                 >
                   Download Resume
@@ -154,8 +154,8 @@ const Navbar = () => {
                 item.name === 'Resume' ? (
                   <a
                     key={item.name}
-                    href="/resume.pdf"
-                    download="Dhananjay_Chougule_Resume.pdf"
+                    href="Dhananjay_Resume(Latest)AI.pdf"
+                    download="Dhananjay_Resume(Latest)AI.pdf"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition"
                   >
                     Download Resume
