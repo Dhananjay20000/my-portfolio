@@ -104,14 +104,14 @@ const Hero = () => {
             </motion.a>
             
             <motion.a
-              href="Dhananjay_Resume(Latest)AI.pdf/"
-              download
-              className="btn-secondary flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <FaDownload /> Download Resume
-            </motion.a>
+  href="/Dhananjay_Resume_2026.pdf"
+  download
+  className="btn-secondary flex items-center gap-2"
+  whileHover={{ scale: 1.05 }}
+  whileTap={{ scale: 0.95 }}
+>
+  <FaDownload /> Download Resume
+</motion.a>
           </div>
 
           <div className="flex justify-center gap-6">

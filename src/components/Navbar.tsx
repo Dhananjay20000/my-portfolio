@@ -10,7 +10,7 @@ const navItems = [
   { name: 'Projects', icon: FaProjectDiagram, href: '#projects' },
   { name: 'Certifications', icon: FaCertificate, href: '#certifications' },
   { name: 'Contact', icon: FaPhone, href: '#contact' },
-  { name: 'Resume', icon: FaFilePdf, href: '/resume.pdf', download: 'Dhananjay_Resume.pdf' },
+  { name: 'Resume', icon: FaFilePdf, href: '/Dhananjay_Resume_2026.pdf', download: 'Dhananjay_Resume_2026' },
 ];
 
 const socialLinks = [
@@ -83,8 +83,8 @@ const Navbar = () => {
               item.name === 'Resume' ? (
                 <a
                   key={item.name}
-                  href="/Dhananjay_Resume(Latest)AI.pdf"
-                  download="Dhananjay_Resume(Latest)AI.pdf"
+                  href="/Dhananjay_Resume_2026.pdf"
+                  download="Dhananjay_Resume_2026.pdf"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition"
                 >
                   Download Resume
@@ -154,8 +154,8 @@ const Navbar = () => {
                 item.name === 'Resume' ? (
                   <a
                     key={item.name}
-                    href="Dhananjay_Resume(Latest)AI.pdf"
-                    download="Dhananjay_Resume(Latest)AI.pdf"
+                    href="/Dhananjay_Resume_2026.pdf"
+                    download="Dhananjay_Resume_2026.pdf"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition"
                   >
                     Download Resume
