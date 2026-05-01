@@ -104,7 +104,7 @@ const Hero = () => {
             </motion.a>
             
             <motion.a
-              href="/resume.pdf"
+              href="Dhananjay_Resume(Latest)AI.pdf/"
               download
               className="btn-secondary flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
