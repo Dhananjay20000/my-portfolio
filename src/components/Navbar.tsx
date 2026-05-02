@@ -10,7 +10,7 @@ const navItems = [
   { name: 'Projects', icon: FaProjectDiagram, href: '#projects' },
   { name: 'Certifications', icon: FaCertificate, href: '#certifications' },
   { name: 'Contact', icon: FaPhone, href: '#contact' },
-  { name: 'Resume', icon: FaFilePdf, href: '/Dhananjay_Resume_2026.pdf', download: 'Dhananjay_Resume_2026' },
+  { name: 'Resume', icon: FaFilePdf, href: '/my-portfolio/Dhananjay_Resume_2026.pdf', download: 'Dhananjay_Resume_2026.pdf' },
 ];
 
 const socialLinks = [
@@ -28,7 +28,6 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
-      // Determine active section
       const sections = navItems.map(item => item.href.slice(1));
       const current = sections.find(section => {
         const element = document.getElementById(section);
@@ -64,7 +63,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+
           <motion.a
             href="#home"
             onClick={(e) => {
@@ -77,13 +76,12 @@ const Navbar = () => {
             DC
           </motion.a>
 
-          {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
               item.name === 'Resume' ? (
                 <a
                   key={item.name}
-                  href="/Dhananjay_Resume_2026.pdf"
+                  href="/my-portfolio/Dhananjay_Resume_2026.pdf"
                   download="Dhananjay_Resume_2026.pdf"
                   className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition"
                 >
@@ -93,7 +91,6 @@ const Navbar = () => {
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  download={item.download}
                   target={item.href.startsWith('http') ? '_blank' : undefined}
                   rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   onClick={(e) => {
@@ -102,7 +99,7 @@ const Navbar = () => {
                       handleNavClick(item.href);
                     }
                   }}
-                  className={`nav-link text-sm font-medium transition-colors duration-200 ${
+                  className={`nav-link text-sm font-medium ${
                     activeSection === item.href.slice(1)
                       ? 'text-primary'
                       : 'text-gray-300 hover:text-white'
@@ -115,7 +112,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Social Links - Desktop */}
           <div className="hidden lg:flex items-center space-x-4">
             {socialLinks.map((social) => (
               <motion.a
@@ -123,16 +119,14 @@ const Navbar = () => {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors"
-                whileHover={{ scale: 1.2, y: -2 }}
-                whileTap={{ scale: 0.95 }}
+                className="text-gray-400 hover:text-white"
+                whileHover={{ scale: 1.2 }}
               >
                 <social.icon size={20} />
               </motion.a>
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className="lg:hidden text-white"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -141,22 +135,16 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden mt-4 pb-4"
-          >
+          <motion.div className="lg:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-3">
               {navItems.map((item) => (
                 item.name === 'Resume' ? (
                   <a
                     key={item.name}
-                    href="/Dhananjay_Resume_2026.pdf"
+                    href="/my-portfolio/Dhananjay_Resume_2026.pdf"
                     download="Dhananjay_Resume_2026.pdf"
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition"
+                    className="bg-blue-600 text-white px-6 py-2 rounded-lg"
                   >
                     Download Resume
                   </a>
@@ -164,39 +152,18 @@ const Navbar = () => {
                   <a
                     key={item.name}
                     href={item.href}
-                    download={item.download}
-                    target={item.href.startsWith('http') ? '_blank' : undefined}
-                    rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                     onClick={(e) => {
                       if (item.href.startsWith('#')) {
                         e.preventDefault();
                         handleNavClick(item.href);
                       }
                     }}
-                    className={`nav-link flex items-center space-x-3 px-4 py-2 rounded-lg transition-colors ${
-                      activeSection === item.href.slice(1)
-                        ? 'bg-primary/20 text-primary'
-                        : 'text-gray-300 hover:bg-white/5'
-                    }`}
+                    className="text-gray-300 px-4 py-2"
                   >
-                    <item.icon size={18} />
-                    <span>{item.name}</span>
+                    {item.name}
                   </a>
                 )
               ))}
-              <div className="flex items-center space-x-4 pt-3 px-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.name}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    <social.icon size={20} />
-                  </a>
-                ))}
-              </div>
             </div>
           </motion.div>
         )}
